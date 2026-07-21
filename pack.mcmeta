@@ -1,6 +1,6 @@
 {
     "pack":{
-        "description": "Block Morph",
+        "description": "Block Morph Resource Pack",
         "pack_format": 55,
         "supported_formats": [34, 64],
         "min_format": 34,

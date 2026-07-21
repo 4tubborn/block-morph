@@ -1,3 +1,6 @@
 {
-    "item.block-morph.selection_stick": "Selection Stick"
+    "item.block-morph.selection_stick": "Selection Stick",
+    "panel.block-morph.set_rules": "Set Rules:\n%s, %s",
+    "panel.block-morph.set_rules.reset": "[Reset]",
+    "panel.block-morph.set_rules.max_block_count": "[Max Structure Size]"
 }
