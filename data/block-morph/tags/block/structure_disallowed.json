@@ -1,0 +1,26 @@
+{
+    "values": [
+        "#air",
+        "#dirt",
+        "dirt_path",
+        "#sand",
+        "gravel",
+        "stone",
+        "deepslate",
+        "water",
+        "lava",
+        "bedrock",
+        "snow_block",
+        "snow",
+        "ice",
+        "blue_ice",
+        "packed_ice",
+        "frosted_ice",
+
+        "netherrack",
+        "basalt",
+        "blackstone",
+
+        "end_stone"
+    ]
+}

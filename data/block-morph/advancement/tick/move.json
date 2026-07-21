@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "0": {
+            "trigger": "tick",
+            "conditions": {
+                "player": {
+                    "nbt": {
+                        "Tags":["block-morph.in_morph"]
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "block-morph:tick/move"
+    }
+}

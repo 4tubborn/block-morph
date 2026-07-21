@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "0": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "player": [
+            {
+                "condition": "reference",
+                "name": "block-morph:is_in_morph"
+            },
+            {
+                "condition": "entity_properties",
+                "entity": "this",
+                "predicate": {
+                    "nbt": "{\"Health\": 0.0f}"
+                }
+            }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "block-morph:tick/death"
+  }
+}

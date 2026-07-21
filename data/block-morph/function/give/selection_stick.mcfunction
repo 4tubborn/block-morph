@@ -1,0 +1,1 @@
+loot give @s loot block-morph:selection_stick

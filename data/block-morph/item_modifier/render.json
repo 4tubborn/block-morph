@@ -1,0 +1,14 @@
+{
+    "function": "copy_custom_data",
+    "source": {
+        "type": "storage",
+        "source": "bs:out"
+    },
+    "ops": [
+        {
+            "op": "replace",
+            "source": "environment.get_biome.type",
+            "target": "block-morph.data.biome"
+        }
+    ]
+}

@@ -1,0 +1,1 @@
+scoreboard objectives add block-morph-demo.matched dummy

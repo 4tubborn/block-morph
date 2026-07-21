@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ #block-morph-demo:provides_fire_resistant run scoreboard players set #fire_resistant block-morph-demo.matched 1

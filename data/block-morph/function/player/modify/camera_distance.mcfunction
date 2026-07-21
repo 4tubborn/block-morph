@@ -1,0 +1,1 @@
+$attribute @s camera_distance modifier add block-morph:morph $(camera_distance) add_value

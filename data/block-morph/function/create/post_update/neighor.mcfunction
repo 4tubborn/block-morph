@@ -1,0 +1,6 @@
+execute if score #block_count block-morph.structure <= #max_block_count block-morph.structure positioned ~1 ~ ~ unless block ~ ~ ~ #block-morph:structure_disallowed run function block-morph:create/post_update/_
+execute if score #block_count block-morph.structure <= #max_block_count block-morph.structure positioned ~-1 ~ ~ unless block ~ ~ ~ #block-morph:structure_disallowed run function block-morph:create/post_update/_
+execute if score #block_count block-morph.structure <= #max_block_count block-morph.structure positioned ~ ~1 ~ unless block ~ ~ ~ #block-morph:structure_disallowed run function block-morph:create/post_update/_
+execute if score #block_count block-morph.structure <= #max_block_count block-morph.structure positioned ~ ~-1 ~ unless block ~ ~ ~ #block-morph:structure_disallowed run function block-morph:create/post_update/_
+execute if score #block_count block-morph.structure <= #max_block_count block-morph.structure positioned ~ ~ ~1 unless block ~ ~ ~ #block-morph:structure_disallowed run function block-morph:create/post_update/_
+execute if score #block_count block-morph.structure <= #max_block_count block-morph.structure positioned ~ ~ ~-1 unless block ~ ~ ~ #block-morph:structure_disallowed run function block-morph:create/post_update/_

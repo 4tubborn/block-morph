@@ -1,0 +1,32 @@
+{
+    "criteria": {
+        "0": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": "recovery_compass",
+                    "predicates": {
+                        "custom_data": {
+                            "block-morph": {
+                                "id": "selection_stick"
+                            }
+                        }
+                    }
+                },
+                "player": [
+                    {
+                        "condition": "reference",
+                        "name": "block-morph:is_sprinting"
+                    },
+                    {
+                        "condition": "reference",
+                        "name": "block-morph:is_in_morph"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "block-morph:tool/remove"
+    }
+}

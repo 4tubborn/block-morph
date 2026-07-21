@@ -1,0 +1,16 @@
+{
+    "condition": "inverted",
+    "term": {
+        "condition": "any_of",
+        "terms": [
+            {
+                "condition": "reference",
+                "name": "block-morph:is_in_morph"
+            },
+            {
+                "condition": "reference",
+                "name": "block-morph:is_sprinting"
+            }
+        ]
+    }
+}
