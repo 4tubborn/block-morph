@@ -1,6 +1,6 @@
 {
     "values": [
-        "block-morph-demo:on_event/create/start"
+        "block-morph-demo:fire_resistant/init"
     ],
     "replace": false
 }

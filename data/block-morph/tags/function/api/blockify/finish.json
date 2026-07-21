@@ -1,6 +1,6 @@
 {
     "values": [
-        "block-morph-demo:on_event/blockify/finish"
+        "block-morph-demo:fire_resistant/remove"
     ],
     "replace": false
 }

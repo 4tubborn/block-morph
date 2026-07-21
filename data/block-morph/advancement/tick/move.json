@@ -3,11 +3,12 @@
         "0": {
             "trigger": "tick",
             "conditions": {
-                "player": {
-                    "nbt": {
-                        "Tags":["block-morph.in_morph"]
+                "player": [
+                    {
+                        "condition": "reference",
+                        "name": "block-morph:is_in_morph"
                     }
-                }
+                ]
             }
         }
     },
