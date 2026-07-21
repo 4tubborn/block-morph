@@ -73,7 +73,7 @@ Hold the selection stick in your off hand, look at a block, and use it (Right-Cl
 
 * Collision: Transformed block structures are purely visual and have no collision.
 
-* Equipment Visibility: Your armor and mainhand/offhand held items remain visible while morphed.
+* Visibility: Your armor and mainhand/offhand held items remain visible while morphed.
 
 ## Development
 
