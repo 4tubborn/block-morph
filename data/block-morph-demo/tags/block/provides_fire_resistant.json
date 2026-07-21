@@ -2,6 +2,8 @@
     "values": [
         "lava",
         "lava_cauldron",
-        "magma_block"
+        "magma_block",
+        "netherrack",
+        "nether_bricks"
     ]
 }

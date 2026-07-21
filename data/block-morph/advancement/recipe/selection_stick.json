@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "0": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:amethyst_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "recipe": {
+      "conditions": {
+        "recipe": "block-morph:selection_stick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "recipe",
+      "0"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "block-morph:selection_stick"
+    ]
+  }
+}

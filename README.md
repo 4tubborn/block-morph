@@ -1,15 +1,44 @@
 # Block Morph
 
-Turn into any blocks in Minecraft! A datapack that lets you transform into customized block structures or individual blocks.
+Turn into any block in Minecraft! A datapack that lets you transform into customized block structures or individual blocks.
+
+---
 
 ## Features
 
 * **Become Any Block**: Seamlessly morph into block structures in the world.
-* **Biome-Aware Plant Color**: Plants (such as grass blocks, short grass, leaves, etc.) dynamically change their tint based on the current biome.
+* **Biome-Aware Plant Color**: Dynamic biome tinting for plants (grass, short grass, leaves, etc.).
+* **Multiplayer Compatibility**: Have fun with your friends!
+
+---
+
+## Dependencies
+
+To use this data pack, make sure you have installed the following required dependencies:
+
+### Data Packs
+
+* [Bookshelf View]()
+* [Bookshelf Block]()
+* [Bookshelf Environment]()
+
+### Resource Packs
+
+* [Block Morph Resource Pack]()
+
+---
 
 ## Usage
 
-* Use command `/function block-morph:give/selection_stick` to give you a selection stick.
+### Obtain Item
+
+* **Crafting Recipe**:  
+  Combine *1x Amethyst Shard*, *1x Echo Shard*, and *1x Chorus Fruit* (shaped).
+* **Command**:
+
+  ```mcfunction
+  /function block-morph:give/selection_stick
+  ```
 
 ### Transform
 
@@ -27,11 +56,26 @@ Hold the selection stick in your off hand, look at a block, and use it (Right-Cl
 
 * Hold `Ctrl` while using (Right-Clicking) the selection stick in either hand to restore your human form and place the blocks back.
 
+### Align
+
+* Sneak (`Shift`) while morphed to instantly snap your position to the block grid.
+
+---
+
+## Config
+
+* Run command `/function block-morph:config/panel` to open the config panel.
+* Run command `/function block-morph:config/debug` to open the debug panel for help if you encounter issues.
+
+---
+
 ## Important Notes
 
 * Collision: Transformed block structures are purely visual and have no collision.
 
 * Equipment Visibility: Your armor and mainhand/offhand held items remain visible while morphed.
+
+---
 
 ## Development
 

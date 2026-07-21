@@ -1,0 +1,1 @@
+scoreboard players set #max_block_count block-morph.structure 250
