@@ -14,16 +14,14 @@
                                     "animation": "block",
                                     "consume_seconds": 99999999,
                                     "has_consume_particles": false,
-                                    "sound": {
-                                        "sound_id": ""
-                                    }
+                                    "sound": {"sound_id": ""}
                                 },
                                 "custom_data": {
-                                    "block-morph": {
-                                        "id": "selection_stick"
-                                    }
+                                    "block-morph": {"id": "selection_stick"}
                                 },
-                                "item_name": "Selection Stick"
+                                "item_name": {"translate": "item.block-morph.selection_stick","fallback": "Selection Stick"},
+                                "rarity": "uncommon",
+                                "item_model": "block-morph:selection_stick"
                             }
                         }
                     ]

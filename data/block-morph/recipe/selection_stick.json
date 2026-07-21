@@ -1,0 +1,31 @@
+{
+    "type": "crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "1": "amethyst_shard",
+        "2": "echo_shard",
+        "3": "chorus_fruit"
+    },
+    "pattern": [
+        "1",
+        "2",
+        "3"
+    ],
+    "result": {
+        "id": "recovery_compass",
+        "components": {
+            "consumable": {
+                "animation": "block",
+                "consume_seconds": 99999999,
+                "has_consume_particles": false,
+                "sound": {"sound_id": ""}
+            },
+            "custom_data": {
+                "block-morph": {"id": "selection_stick"}
+            },
+            "item_name": {"translate": "item.block-morph.selection_stick","fallback": "Selection Stick"},
+            "rarity": "uncommon",
+            "item_model": "block-morph:selection_stick"
+        }
+    }
+}
