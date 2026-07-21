@@ -1,0 +1,16 @@
+{
+
+    "model": {
+        "type": "condition",
+        "property": "keybind_down",
+        "keybind": "key.sprint",
+        "on_true": {
+            "type": "model",
+            "model": "block-morph:selection_stick_blockify"
+        },
+        "on_false": {
+            "type": "model",
+            "model": "block-morph:selection_stick"
+        }
+    }
+}
