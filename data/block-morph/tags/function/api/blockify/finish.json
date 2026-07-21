@@ -1,6 +1,6 @@
 {
     "values": [
-        "block-morph-demo:fire_resistant/remove"
+        "block-morph-demo:effect/remove"
     ],
     "replace": false
 }

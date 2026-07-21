@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ #block-morph-demo:provides_fire_resistant run scoreboard players set #fire_resistant block-morph-demo.matched 1
+execute if block ~ ~ ~ #block-morph-demo:provides_slow_falling run scoreboard players set #slow_falling block-morph-demo.matched 1

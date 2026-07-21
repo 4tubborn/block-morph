@@ -54,7 +54,7 @@ tag @n[type=text_display,tag=block-morph.init,tag=block-morph.root] remove block
 function block-morph:create/cal/align
 #玩家处理
 
-execute store result storage block-morph:tmp player.camera_distance int 0.1 run scoreboard players get #max_extent block-morph.structure
+execute store result storage block-morph:tmp player.camera_distance int 0.3 run scoreboard players get #max_extent block-morph.structure
 function block-morph:player/modify/camera_distance with storage block-morph:tmp player
 
 function block-morph:player/start

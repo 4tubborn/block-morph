@@ -1,6 +1,6 @@
 {
     "values": [
-        "block-morph-demo:fire_resistant/init"
+        "block-morph-demo:effect/init"
     ],
     "replace": false
 }

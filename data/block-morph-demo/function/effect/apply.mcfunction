@@ -1,0 +1,2 @@
+execute if score #fire_resistant block-morph-demo.matched matches 1 run effect give @s fire_resistance infinite 255 true
+execute if score #slow_falling block-morph-demo.matched matches 1 run effect give @s slow_falling infinite 1 true
