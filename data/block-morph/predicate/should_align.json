@@ -5,11 +5,15 @@
         "type_specific": {
             "type": "player",
             "input": {
+                "sneak": true,
                 "forward": false,
                 "backward": false,
                 "left": false,
                 "right": false
             }
+        },
+        "flags": {
+            "is_flying": false
         }
     }
 }
