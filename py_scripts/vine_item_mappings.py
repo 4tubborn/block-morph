@@ -2,29 +2,7 @@ import json
 import re
 import os
 
-raw_csv_data = """
-Warm Ocean, Lukewarm Ocean, Deep Lukewarm Ocean, Ocean, Deep Ocean, Cold Ocean, Deep Cold Ocean, River, Deep Frozen Ocean, The Void, Lush Caves | #8eb971 | #71a74d | #a17448
-Plains, Beach, Sunflower Plains, Deep Dark | #91bd59 | #77ab2f | #a37546
-Dripstone Caves | #8db58a | #70a26c | #a36546
-Frozen River, Frozen Ocean, Deep Frozen Ocean, Snowy Plains, Ice Spikes, Grove, Frozen Peaks, Jagged Peaks, Snowy Slopes, Snowy Taiga | #80b497 | #60a17b | #8f7a5a
-Snowy Beach | #83b593 | #64a278 | #917958
-Meadow, Cherry Grove | #83bb6d | #63a948 | #a17448
-Desert, Savanna, Savanna Plateau, Windswept Savanna, Badlands, Wooded Badlands, Eroded Badlands | #bfb755 | #aea42a | #a38046
-Windswept Savanna | #82c245 | #64b216 | #a37146
-Forest, Flower Forest | #79c05a | #59ae30 | #a36d46
-Dark Forest | #507a32 | #59ae30 | #7b5334
-Birch Forest, Old Growth Birch Forest | #88bb67 | #6ba941 | #a37246
-Old Growth Pine Taiga | #86b87f | #68a55f | #9c754d
-Old Growth Spruce Taiga, Taiga | #86b783 | #68a464 | #9a764f
-Windswept Gravelly Hills, Windswept Forest, Windswept Hills, Stony Shore | #8ab689 | #6da36b | #967753
-Jungle, Bamboo Jungle | #59c93c | #30bb0b | #a36346
-Sparse Jungle | #64c73f | #3eb80f | #a36646
-Mushroom Fields | #55c93f | #2bbb0f | #a36246
-Stony Peaks | #9abe4b | #82ac1e | #927957
-Mangrove Swamp | #6a7039 | #6a7039 | #7b5334
-Swamp | #6a7039 | #8db127 | #7b5334
-Pale Garden | #778272 | #878D76 | #a0a69c
-"""
+import config
 
 def name_to_id(name: str) -> str:
     snake = re.sub(r'[\s\-]+', '_', name.strip()).lower()
@@ -37,7 +15,7 @@ def hex_to_int(hex_str: str) -> int:
     return val
 
 foliage_colors = {}
-for line in raw_csv_data.strip().split('\n'):
+for line in config.raw_csv_data.strip().split('\n'):
     if not line or '|' not in line:
         continue
     parts = line.split('|')
@@ -153,9 +131,8 @@ def generate_vine_item_model(foliage_items: list) -> dict:
     }
 
 if __name__ == "__main__":
-    items_dir = "assets/minecraft/items"
-    models_dir = "assets/minecraft/models/item"
-    os.makedirs(items_dir, exist_ok=True)
+    models_dir = "../assets/minecraft/models/item"
+    os.makedirs(config.output_dir, exist_ok=True)
     os.makedirs(models_dir, exist_ok=True)
 
     # 1. 生成 2D 手持模型 assets/minecraft/models/item/vine.json
@@ -171,7 +148,7 @@ if __name__ == "__main__":
     # 2. 生成 items/vine.json 核心逻辑定义
     foliage_items = list(foliage_colors.items())
     vine_data = generate_vine_item_model(foliage_items)
-    with open(os.path.join(items_dir, "vine.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(config.output_dir, "vine.json"), "w", encoding="utf-8") as f:
         json.dump(vine_data, f, separators=(',', ':'), ensure_ascii=False)
 
     print("导出成功！已将第 1 个 select 配置为：true -> 3D模型, false -> air, fallback -> 2D物品模型。")

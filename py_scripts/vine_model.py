@@ -35,7 +35,7 @@ def generate_vine_child_model(direction: str) -> dict:
     }
 
 if __name__ == "__main__":
-    models_dir = "assets/minecraft/models/block"
+    models_dir = "../assets/minecraft/models/block"
     os.makedirs(models_dir, exist_ok=True)
 
     directions = ["vine_north", "vine_east", "vine_south", "vine_west", "vine_up"]
