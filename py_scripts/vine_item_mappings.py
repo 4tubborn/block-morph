@@ -112,10 +112,6 @@ def generate_vine_item_model(foliage_items: list) -> dict:
                     {
                         "when": "true",
                         "model": dir_condition_tree
-                    },
-                    {
-                        "when": "false",
-                        "model": air_node
                     }
                 ],
                 "fallback": air_node

@@ -20,13 +20,13 @@ def generate_vine_child_model(direction: str) -> dict:
 
     # 根据方向给 Element 加上 3D 空间旋转
     if direction == "vine_west":
-        element["rotation"] = {"origin": [8, 8, 8], "axis": "y", "angle": 90}
+        element["rotation"] = {"origin": [8, 8, 8], "axis": "y", "angle": -90}
     elif direction == "vine_north":
         element["rotation"] = {"origin": [8, 8, 8], "axis": "y", "angle": 180}
     elif direction == "vine_east":
-        element["rotation"] = {"origin": [8, 8, 8], "axis": "y", "angle": 270}
+        element["rotation"] = {"origin": [8, 8, 8], "axis": "y", "angle": 90}
     elif direction == "vine_up":
-        element["rotation"] = {"origin": [8, 8, 8], "axis": "x", "angle": -90}
+        element["rotation"] = {"origin": [8, 8, 8], "axis": "x", "angle": 90}
     # vine_south 保持 0 度不加 rotation
 
     return {
@@ -35,7 +35,7 @@ def generate_vine_child_model(direction: str) -> dict:
     }
 
 if __name__ == "__main__":
-    models_dir = "../assets/minecraft/models/block"
+    models_dir = "assets/minecraft/models/block"
     os.makedirs(models_dir, exist_ok=True)
 
     directions = ["vine_north", "vine_east", "vine_south", "vine_west", "vine_up"]
@@ -45,5 +45,3 @@ if __name__ == "__main__":
             json.dump(model_data, f, separators=(',', ':'), ensure_ascii=False)
 
     print("已使用 Element rotation 修正 5 个朝向模型！")
-
-#实际上有些朝向相反了，手动修正
