@@ -77,4 +77,4 @@ Hold the selection stick in your off hand, look at a block, and use it (Right-Cl
 
 ## Development
 
-Check out the [Wiki](https://github.com/4tubborn/block-morph/wiki) for developer guides and tutorials.
+Check out the [Wiki](https://github.com/4tubborn/block-morph/wiki) for developer guides.
