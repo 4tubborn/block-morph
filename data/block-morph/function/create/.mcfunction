@@ -39,16 +39,11 @@ function block-morph:create/cal/center
 
 
 #center
-execute store result storage block-morph:tmp root.x double 0.1 run scoreboard players get #center.x block-morph.structure
-execute store result storage block-morph:tmp root.y double 0.1 run scoreboard players get #center.y block-morph.structure
-execute store result storage block-morph:tmp root.z double 0.1 run scoreboard players get #center.z block-morph.structure
-
-function block-morph:create/set/root with storage block-morph:tmp root
-
-execute as @e[type=#block-morph:display,tag=block-morph.init,tag=block-morph.visual] run function block-morph:create/set/bde
-
-tag @n[type=text_display,tag=block-morph.init,tag=block-morph.root] remove block-morph.init
-
+#execute store result storage block-morph:tmp root.x double 0.1 run scoreboard players get #center.x block-morph.structure
+#execute store result storage block-morph:tmp root.y double 0.1 run scoreboard players get #center.y block-morph.structure
+#execute store result storage block-morph:tmp root.z double 0.1 run scoreboard players get #center.z block-morph.structure
+#root & bde/ide
+function block-morph:create/set/root
 
 #align模式
 function block-morph:create/cal/align

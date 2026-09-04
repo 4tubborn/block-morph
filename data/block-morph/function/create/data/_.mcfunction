@@ -10,9 +10,10 @@ setblock ~ ~ ~ air strict
 #tellraw @a ["pos: ",{entity:"@s",nbt:"Pos"}]
 #
 #实际pos: x,z,y不偏移
-execute store result score @s block-morph.pos.x run data get entity @s Pos[0] 10
-execute store result score @s block-morph.pos.y run data get entity @s Pos[1] 10
-execute store result score @s block-morph.pos.z run data get entity @s Pos[2] 10
+data modify storage block-morph:tmp data.bde.pos set from entity @s Pos
+execute store result score @s block-morph.pos.x run data get storage block-morph:tmp data.bde.pos[0] 10
+execute store result score @s block-morph.pos.y run data get storage block-morph:tmp data.bde.pos[1] 10
+execute store result score @s block-morph.pos.z run data get storage block-morph:tmp data.bde.pos[2] 10
 
 #scoreboard players operation #total.x block-morph.structure += @s block-morph.pos.x
 #scoreboard players operation #total.y block-morph.structure += @s block-morph.pos.y
