@@ -9,8 +9,9 @@ data modify storage block-morph:tmp init.bde.data.block-morph.block_string set f
 
 #tellraw @a ["block count: ",{score:{name:"#block_count",objective:"block-morph.structure"}}]
 
-
-data modify storage block-morph:tmp init.bde.interpolation_duration set value 1
+#set to 
+#data modify storage block-morph:tmp init.bde.interpolation_duration set value 1
+#data modify storage block-morph:tmp init.bde.teleport_duration set value 3
 
 data modify entity @s {} merge from storage block-morph:tmp init.bde
 

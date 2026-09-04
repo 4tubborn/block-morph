@@ -1,0 +1,1 @@
+execute store result score #player_count block-morph.util.const if entity @a

@@ -8,7 +8,7 @@ data modify storage block-morph:tmp init.bde.data.block-morph.block_string set f
 #tellraw @a ["max count: ",{score:{name:"#max_block_count",objective:"block-morph.structure"}}]
 #tellraw @a ["block count: ",{score:{name:"#block_count",objective:"block-morph.structure"}}]
 
-data modify storage block-morph:tmp init.bde.interpolation_duration set value 1
+#data modify storage block-morph:tmp init.bde.interpolation_duration set value 1
 
 data modify entity @s {} merge from storage block-morph:tmp init.bde
 #标记需要着色

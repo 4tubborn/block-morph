@@ -7,6 +7,5 @@ execute store result entity @s transformation.translation[2] double 0.1 run scor
 #tellraw @a ["tr: ",{entity:"@s",nbt:"transformation.translation"}]
 #tellraw @a ["pos: ",{score:{name:"@s",objective:"block-morph.pos.x"}}," ",{score:{name:"@s",objective:"block-morph.pos.y"}}," ",{score:{name:"@s",objective:"block-morph.pos.z"}}," ",]
 
-
 tag @s remove block-morph.init
 ride @s mount @n[type=text_display,tag=block-morph.init,tag=block-morph.root]
