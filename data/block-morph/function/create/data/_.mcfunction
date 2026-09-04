@@ -1,8 +1,6 @@
 tag @s add block-morph.init
 tag @s add block-morph.visual
 
-setblock ~ ~ ~ air strict
-
 #summon shulker ^ ^ ^ {Tags:["phys.init","phys.en"],Glowing:true,active_effects:[{id:"invisibility",amplifier:1b,duration:-1,show_particles:0b}],AttachFace:0b,Invulnerable:1b,NoAI:1b,NoGravity:1b,PersistenceRequired:1b,Silent:1b}
 #ride @n[type=shulker,distance=..1,tag=phys.init] mount @s
 #execute on passengers run tag @s remove phys.init
@@ -36,3 +34,7 @@ execute if score @s block-morph.pos.y > #max.y block-morph.structure run scorebo
 # --- Z 轴 ---
 execute if score @s block-morph.pos.z < #min.z block-morph.structure run scoreboard players operation #min.z block-morph.structure = @s block-morph.pos.z
 execute if score @s block-morph.pos.z > #max.z block-morph.structure run scoreboard players operation #max.z block-morph.structure = @s block-morph.pos.z
+
+function #block-morph:api/create/loop
+
+setblock ~ ~ ~ air strict
