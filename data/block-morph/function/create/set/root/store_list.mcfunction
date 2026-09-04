@@ -1,0 +1,1 @@
+$data modify storage block-morph:data $(id).blocks set from storage block-morph:tmp init.data.blocks

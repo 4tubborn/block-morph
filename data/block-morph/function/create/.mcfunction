@@ -9,6 +9,9 @@ scoreboard players set #min.y block-morph.structure 2147483647
 scoreboard players set #max.y block-morph.structure -2147483648
 scoreboard players set #min.z block-morph.structure 2147483647
 scoreboard players set #max.z block-morph.structure -2147483648
+#stores bde/ide's blocks
+data remove storage block-morph:tmp init.data.blocks
+data modify storage block-morph:tmp init.data.blocks set value []
 
 scoreboard players set #block_count block-morph.structure 0
 scoreboard players set #tint block-morph.tint 0
@@ -44,7 +47,6 @@ function block-morph:create/cal/center
 #execute store result storage block-morph:tmp root.z double 0.1 run scoreboard players get #center.z block-morph.structure
 #root & bde/ide
 function block-morph:create/set/root
-
 #align模式
 function block-morph:create/cal/align
 #玩家处理
