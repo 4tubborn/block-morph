@@ -2,7 +2,7 @@
 #scoreboard players reset #total.y block-morph.structure
 #scoreboard players reset #total.z block-morph.structure
 function #block-morph:api/create/start
-
+#relative pos, offset
 scoreboard players set #min.x block-morph.structure 2147483647
 scoreboard players set #max.x block-morph.structure -2147483648
 scoreboard players set #min.y block-morph.structure 2147483647
@@ -12,11 +12,15 @@ scoreboard players set #max.z block-morph.structure -2147483648
 #stores bde/ide's blocks
 data remove storage block-morph:tmp init.data.blocks
 data modify storage block-morph:tmp init.data.blocks set value []
-
+#api-visible
 scoreboard players set #block_count block-morph.structure 0
+#api-visible
 scoreboard players set #tint block-morph.tint 0
 #scoreboard players set #center.y block-morph.structure 2048
-
+#api-visible
+scoreboard players set #post block-morph.offset.x 0
+scoreboard players set #post block-morph.offset.y 10
+scoreboard players set #post block-morph.offset.z 0
 #如果对准的不是可以实体化的方块，或者max_block_count为0就return
 execute unless function block-morph:create/post_update/self run return fail
 
@@ -47,10 +51,9 @@ function block-morph:create/cal/center
 #execute store result storage block-morph:tmp root.z double 0.1 run scoreboard players get #center.z block-morph.structure
 #root & bde/ide
 function block-morph:create/set/root
-#align模式
+#align模式, stored in player
 function block-morph:create/cal/align
 #玩家处理
-
 execute store result storage block-morph:tmp player.camera_distance int 0.3 run scoreboard players get #max_extent block-morph.structure
 function block-morph:player/modify/camera_distance with storage block-morph:tmp player
 

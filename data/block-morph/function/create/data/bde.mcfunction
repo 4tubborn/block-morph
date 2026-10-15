@@ -9,7 +9,6 @@ data modify storage block-morph:tmp init.data.blocks append from storage bs:out 
 #tellraw @a ["max count: ",{score:{name:"#max_block_count",objective:"block-morph.structure"}}]
 
 #tellraw @a ["block count: ",{score:{name:"#block_count",objective:"block-morph.structure"}}]
-
 #set to 
 #data modify storage block-morph:tmp init.bde.interpolation_duration set value 1
 #data modify storage block-morph:tmp init.bde.teleport_duration set value 3

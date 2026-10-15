@@ -6,12 +6,15 @@ tag @s add block-morph.visual
 #execute on passengers run tag @s remove phys.init
 
 #tellraw @a ["pos: ",{entity:"@s",nbt:"Pos"}]
-#
+#offset,x&z-5
+scoreboard players operation @s block-morph.offset.x = #post block-morph.offset.x
+scoreboard players operation @s block-morph.offset.y = #post block-morph.offset.y
+scoreboard players operation @s block-morph.offset.z = #post block-morph.offset.z
 #实际pos: x,z,y不偏移
-data modify storage block-morph:tmp data.bde.pos set from entity @s Pos
-execute store result score @s block-morph.pos.x run data get storage block-morph:tmp data.bde.pos[0] 10
-execute store result score @s block-morph.pos.y run data get storage block-morph:tmp data.bde.pos[1] 10
-execute store result score @s block-morph.pos.z run data get storage block-morph:tmp data.bde.pos[2] 10
+#data modify storage block-morph:tmp data.bde.pos set from entity @s Pos
+#execute store result score @s block-morph.pos.x run data get storage block-morph:tmp data.bde.pos[0] 10
+#execute store result score @s block-morph.pos.y run data get storage block-morph:tmp data.bde.pos[1] 10
+#execute store result score @s block-morph.pos.z run data get storage block-morph:tmp data.bde.pos[2] 10
 
 #scoreboard players operation #total.x block-morph.structure += @s block-morph.pos.x
 #scoreboard players operation #total.y block-morph.structure += @s block-morph.pos.y
@@ -26,14 +29,14 @@ execute store result score @s block-morph.pos.z run data get storage block-morph
 
 #更新min/max
 # --- X 轴 ---
-execute if score @s block-morph.pos.x < #min.x block-morph.structure run scoreboard players operation #min.x block-morph.structure = @s block-morph.pos.x
-execute if score @s block-morph.pos.x > #max.x block-morph.structure run scoreboard players operation #max.x block-morph.structure = @s block-morph.pos.x
+execute if score @s block-morph.offset.x < #min.x block-morph.structure run scoreboard players operation #min.x block-morph.structure = @s block-morph.offset.x
+execute if score @s block-morph.offset.x > #max.x block-morph.structure run scoreboard players operation #max.x block-morph.structure = @s block-morph.offset.x
 # --- Y 轴 ---
-execute if score @s block-morph.pos.y < #min.y block-morph.structure run scoreboard players operation #min.y block-morph.structure = @s block-morph.pos.y
-execute if score @s block-morph.pos.y > #max.y block-morph.structure run scoreboard players operation #max.y block-morph.structure = @s block-morph.pos.y
+execute if score @s block-morph.offset.y < #min.y block-morph.structure run scoreboard players operation #min.y block-morph.structure = @s block-morph.offset.y
+execute if score @s block-morph.offset.y > #max.y block-morph.structure run scoreboard players operation #max.y block-morph.structure = @s block-morph.offset.y
 # --- Z 轴 ---
-execute if score @s block-morph.pos.z < #min.z block-morph.structure run scoreboard players operation #min.z block-morph.structure = @s block-morph.pos.z
-execute if score @s block-morph.pos.z > #max.z block-morph.structure run scoreboard players operation #max.z block-morph.structure = @s block-morph.pos.z
+execute if score @s block-morph.offset.z < #min.z block-morph.structure run scoreboard players operation #min.z block-morph.structure = @s block-morph.offset.z
+execute if score @s block-morph.offset.z > #max.z block-morph.structure run scoreboard players operation #max.z block-morph.structure = @s block-morph.offset.z
 
 function #block-morph:api/create/loop
 

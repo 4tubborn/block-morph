@@ -26,3 +26,5 @@ scoreboard players set #1000 block-morph.util.const 1000
 
 execute unless score #global_id block-morph.id matches 0.. run scoreboard players set #global_id block-morph.id 0
 execute unless score #max_block_count block-morph.structure matches 0.. run scoreboard players set #max_block_count block-morph.structure 250
+#1: use structure's center, 0: keep relative position to the player
+execute unless score #center block-morph.structure matches 0..1 run scoreboard players set #center block-morph.structure 1
