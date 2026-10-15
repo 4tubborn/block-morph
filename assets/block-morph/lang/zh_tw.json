@@ -1,6 +1,7 @@
 {
     "item.block-morph.selection_stick": "選區棒",
-    "panel.block-morph.set_rules": "設定：\n%s，%s",
+    "panel.block-morph.set_rules": "設定：",
     "panel.block-morph.set_rules.reset": "[重置]",
-    "panel.block-morph.set_rules.max_block_count": "[最大結構尺寸]"
+    "panel.block-morph.set_rules.max_block_count": "[最大結構尺寸]",
+    "panel.block-morph.set_rules.center": "[中心]"
 }
